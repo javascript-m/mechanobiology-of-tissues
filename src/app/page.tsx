@@ -2,6 +2,50 @@
 import Image from "next/image";
 import "./styles.css";
 
+const program = [
+  {
+    day: "April 15, Wednesday",
+    items: [
+      {
+        time: "19:00 – 20:30",
+        type: "event",
+        title: "Welcome reception and gathering"
+      }
+    ]
+  },
+
+  {
+    day: "April 16, Thursday",
+    items: [
+      { time: "09:00", type: "invited", speaker: "TBA", title: "Title TBA" },
+      { time: "09:30", type: "student", speaker: "TBA", title: "Title TBA" },
+      { time: "10:00", type: "invited", speaker: "TBA", title: "Title TBA" },
+      { time: "10:30", type: "student", speaker: "TBA", title: "Title TBA" },
+      { time: "11:00 – 11:30", type: "break", title: "Coffee break" },
+      { time: "11:30", type: "invited", speaker: "TBA", title: "Title TBA" },
+      { time: "12:00", type: "student", speaker: "TBA", title: "Title TBA" },
+      { time: "12:30", type: "invited", speaker: "TBA", title: "Title TBA" },
+      { time: "13:00", type: "student", speaker: "TBA", title: "Title TBA" },
+      { time: "13:30 – 14:00", type: "break", title: "Coffee break / mini lunch" },
+      { time: "14:00 – 16:00", type: "highlight", title: "Poster session & lunch" },
+      { time: "16:00 – 18:00", type: "highlight", title: "Social activities & city visit" },
+      { time: "18:00", type: "highlight", title: "Conference dinner" }
+    ]
+  },
+
+  {
+    day: "April 17, Friday",
+    items: [
+      { time: "09:00", type: "invited", speaker: "TBA", title: "Title TBA" },
+      { time: "09:30", type: "student", speaker: "TBA", title: "Title TBA" },
+      { time: "10:30 – 10:45", type: "break", title: "Coffee break" },
+      { time: "10:45", type: "invited", speaker: "TBA", title: "Title TBA" },
+      { time: "11:15", type: "student", speaker: "TBA", title: "Title TBA" },
+      { time: "12:15", type: "highlight", title: "Wrap-up and goodbye" }
+    ]
+  }
+];
+
 export default function Home() {
   return (
     <div className="landing-page">
@@ -36,8 +80,7 @@ export default function Home() {
           </p>
 
           <p>
-            The conference <strong>Mechanobiology Meets Physics</strong> 
-            brings together researchers from physics, biology, engineering, and quantitative sciences to understand how mechanical principles shape cellular and tissue behavior. 
+            The conference <strong>Mechanobiology of Tissues</strong> brings together researchers from physics, biology and engineering to understand how mechanical principles shape cellular and tissue behavior. 
           </p>
 
           <p>
@@ -53,7 +96,7 @@ export default function Home() {
 
           <ul className="list">
             <li><strong>Dates: </strong>April 15 – April 17, 2026</li>
-            <li><strong>Location: </strong>MPI for Physics and Medicine</li>
+            <li><strong>Location: </strong>Max-Planck-Zentrum für Physik und Medizin</li>
           </ul>
 
           <p>
@@ -103,7 +146,7 @@ export default function Home() {
           </a>
 
           <p>
-            Submission deadline: <strong>March 26, 2026</strong>
+            Submission deadline: <strong>March 23, 2026</strong>
           </p>
         </section>
 
@@ -117,10 +160,18 @@ export default function Home() {
             their work and engage in scientific discussions.
           </p>
 
+          <ul className="list">
+            <li>Format: A0, portrait</li>
+          </ul>
+
           <p>
             The poster session provides an opportunity for participants
             to receive feedback, exchange ideas, and explore potential
             collaborations in a relaxed and interactive environment.
+          </p>
+
+          <p>
+            Titles deadline: <strong>March 26, 2026</strong>
           </p>
         </section>
 
@@ -129,17 +180,67 @@ export default function Home() {
           <h2 className="section-title">Invited Speakers</h2>
 
           <ul className="list">
-            <li>Sara Kaliman</li>
-            <li>Kristian Franze</li>
+            <li>Prof. Dr. Kristian Franze</li>
+            <li>Dr. Sara Kaliman</li>
+            <li>Dr. Jona Kayser</li>
           </ul>
 
           <h2 className="section-title">Organisers</h2>
           <ul className="list">
-            <li>Ana Sunčana Smith</li>
+            <li>Prof. Dr. Ana Sunčana Smith</li>
           </ul>
         </section>
           
       </div>
+
+      <section className="program-wrapper">
+        <h2 className="program-main-title">Detailed Program</h2>
+
+        {program.map((day, i) => (
+          <div key={i} className="program-day">
+
+            <h3 className="program-day-title">{day.day}</h3>
+
+            <div className="program-table">
+
+              {day.items.map((item, j) => (
+                <div key={j} className={`program-row ${item.type}`}>
+
+                  <div className="program-time">{item.time}</div>
+
+                  <div className="program-details">
+
+                    {item.type === "invited" && (
+                      <>
+                        <span className="talk-type invited">Invited talk</span>
+                        <span className="talk-speaker">{item.speaker}</span>
+                        <span className="talk-title">{item.title}</span>
+                      </>
+                    )}
+
+                    {item.type === "student" && (
+                      <>
+                        <span className="talk-type student">Student/Postdoc talk</span>
+                        <span className="talk-speaker">{item.speaker}</span>
+                        <span className="talk-title">{item.title}</span>
+                      </>
+                    )}
+
+                    {(item.type === "break" ||
+                      item.type === "highlight" ||
+                      item.type === "event") && (
+                      <span className="program-special">{item.title}</span>
+                    )}
+
+                  </div>
+
+                </div>
+              ))}
+
+            </div>
+          </div>
+        ))}
+      </section>
 
       {/* FOOTER */}
       <footer className="footer">

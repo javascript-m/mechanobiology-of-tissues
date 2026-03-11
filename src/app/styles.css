@@ -265,3 +265,118 @@ p {
   }
 
 }
+
+/* PROGRAM TABLE */
+
+.program-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.program-main-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--plum);
+  margin-bottom: 2rem;
+}
+
+.program-day {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.program-day-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--plum);
+  border-bottom: 2px solid var(--rose);
+  padding-bottom: 0.4rem;
+}
+
+/* TABLE */
+
+.program-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.program-row:last-child {
+  border-bottom: none;
+}
+
+.program-time {
+  text-align: right;
+  font-weight: 600;
+  color: var(--plum);
+}
+
+.program-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TALK TYPES */
+
+.talk-type {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.talk-type.invited {
+  color: var(--plum);
+}
+
+.talk-type.student {
+  color: var(--text-secondary);
+}
+
+.talk-speaker {
+  font-weight: 500;
+}
+
+.talk-title {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* SPECIAL ITEMS */
+
+.program-row.highlight {
+  font-weight: 600;
+}
+
+.program-special {
+  color: var(--plum);
+}
+
+.program-row.break {
+  opacity: 0.8;
+  background-color: var(--peach);
+  margin: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .program-row {
+    grid-template-columns: 1fr;
+  }
+
+  .program-time {
+    font-size: 0.9rem;
+  }
+
+}
