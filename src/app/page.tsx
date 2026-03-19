@@ -1,6 +1,9 @@
+'use client'
+
 // src/app/page.tsx
 import Image from "next/image";
 import "./styles.css";
+import { useState } from "react";
 
 const program = [
   {
@@ -47,20 +50,32 @@ const program = [
 ];
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="landing-page">
 
       {/* HERO */}
-      <header className="header">
+      {/* <header className="header">
         <h1 className="title">Mechanobiology of Tissues</h1>
         <p className="subtitle">
           April 15–17, 2026 | Max-Planck-Zentrum für Physik und Medizin
         </p>
-        {/* <p className="hero-description">
-          A conference bringing together researchers from physics, biology,
-          engineering, and quantitative sciences to explore how mechanical
-          forces shape cellular and tissue behavior.
-        </p> */}
+        <p className="hero-description">
+          A meeting to bring together the mechanobiology communities of Aachen and Erlangen.
+        </p>
+      </header> */}
+
+      <header className="header">
+        <div className="hero-image-wrapper">
+          <Image
+            src="/headline.png" // your generated title image
+            alt="Mechanobiology of Tissues"
+            fill
+            className="hero-image"
+            priority
+          />
+        </div>
       </header>
 
       {/* MAIN GRID */}
@@ -68,7 +83,7 @@ export default function Home() {
 
         {/* ABOUT SECTION */}
         <section className="section">
-          <h2 className="section-title">About the Conference</h2>
+          <h2 className="section-title">About the Meeting</h2>
 
           <p>
             <strong>Mechanobiology</strong> studies how physical forces and mechanical
@@ -79,7 +94,7 @@ export default function Home() {
             physics.
           </p>
 
-          <p>
+          {/* <p>
             The conference <strong>Mechanobiology of Tissues</strong> brings together researchers from physics, biology and engineering to understand how mechanical principles shape cellular and tissue behavior. 
           </p>
 
@@ -87,7 +102,7 @@ export default function Home() {
             Participants will have the opportunity to present their work,
             discuss emerging research directions, and establish connections
             across disciplines.
-          </p>
+          </p> */}
         </section>
 
         {/* PROGRAM SECTION */}
@@ -99,13 +114,22 @@ export default function Home() {
             <li><strong>Location: </strong>Max-Planck-Zentrum für Physik und Medizin</li>
           </ul>
 
-          <p>
+          {/* <p>
             The meeting will include invited talks, student presentations,
             and a poster session designed to foster discussion and
             collaboration among participants.
-          </p>
+          </p> */}
+          {/* MAP */}
+          <div className="map-container">
+            <img
+              src="/map.png"
+              alt="Conference location map"
+              className="map-thumbnail"
+              onClick={() => setIsOpen(true)}
+            />
+          </div>
 
-          <h2 className="section-title">Program Highlights</h2>
+          {/* <h2 className="section-title">Program Highlights</h2>
 
           <h3></h3>
           <ul className="list">
@@ -113,28 +137,37 @@ export default function Home() {
             <li>Student talks selected from submitted abstracts</li>
             <li>Poster session and networking discussions</li>
             <li>Informal scientific discussions and collaboration opportunities</li>
-          </ul>
+          </ul> */}
         </section>
+
+        {isOpen && (
+        <div className="map-modal" onClick={() => setIsOpen(false)}>
+          <img
+            src="/map.png"
+            alt="Map enlarged"
+            className="map-full"
+            onClick={(e) => e.stopPropagation()} // prevents closing when clicking image
+          />
+        </div>
+      )}
 
         {/* ABSTRACT SUBMISSION */}
         <section className="section">
           <h2 className="section-title">Abstract Submission</h2>
 
           <p>
-            We invite young investigators and students to submit abstracts
-            for oral presentations. Selected participants will present
-            their research during dedicated student talk sessions.
+            Selected young investigators and students will present their research in 10 minute oral presentations. Others will have the opportunity to show their work in a poster session.
           </p>
 
-          <ul className="list">
+          {/* <ul className="list">
             <li>Available talk slots: 12</li>
             <li>Duration: <strong>15 minutes</strong></li>
-          </ul>
+          </ul> */}
 
-          <p>
+          {/* <p>
             If you would like to present your work, please submit your
             abstract through the submission form below.
-          </p>
+          </p> */}
 
           <a
             className="button"
@@ -146,7 +179,7 @@ export default function Home() {
           </a>
 
           <p>
-            Submission deadline: <strong>March 23, 2026</strong>
+            Deadline: <strong>March 23, 2026</strong>
           </p>
         </section>
 
@@ -155,40 +188,75 @@ export default function Home() {
           <h2 className="section-title">Poster Session</h2>
 
           <p>
+            Poster session will be held on April 17th where all young investigators will have the opportunity to present their work.
+          </p>
+
+          {/* <p>
             In addition to oral presentations, the conference will host
             a <strong>poster session</strong> where students and researchers can present
             their work and engage in scientific discussions.
-          </p>
+          </p> */}
 
           <ul className="list">
             <li>Format: A0, portrait</li>
           </ul>
 
-          <p>
+          {/* <p>
             The poster session provides an opportunity for participants
             to receive feedback, exchange ideas, and explore potential
             collaborations in a relaxed and interactive environment.
-          </p>
+          </p> */}
+
+          <a
+            className="button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdC-BzqCK6JPmVC_ZrRES_g9Hp9WPT9YuYxZ89TpSSsh-IELg/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Submit Title
+          </a>
 
           <p>
-            Titles deadline: <strong>March 26, 2026</strong>
+            Deadline: <strong>March 26, 2026</strong>
           </p>
         </section>
 
-        {/* SPEAKERS and ORGANISERS */}
+        {/* SPEAKERS */}
         <section className="section">
           <h2 className="section-title">Invited Speakers</h2>
 
           <ul className="list">
+            <li>Prof. Dr. Felix B. Engel</li>
+            <li>Prof. Dr. Ben Fabry</li>
             <li>Prof. Dr. Kristian Franze</li>
             <li>Dr. Sara Kaliman</li>
             <li>Dr. Jona Kayser</li>
+            <li>Dr. Jacopo Di Russo</li>
+          </ul>
+        </section>
+
+        {/* ORGANISERS */}
+        <section className="section">
+          <h2 className="section-title">Organisers</h2>
+
+          <ul className="list">
+            <li>Madhura Ramani Dhatchayani</li>
           </ul>
 
-          <h2 className="section-title">Organisers</h2>
-          <ul className="list">
-            <li>Prof. Dr. Ana Sunčana Smith</li>
-          </ul>
+          <p className="support-text">With the support of:</p>
+
+          <div className="logos">
+            {/* EAM + text */}
+            <div className="logo-item">
+              <img src="/eam.jpg" alt="EAM logo" className="logo" />
+              <p className="logo-caption">(Ina Viebach)</p>
+            </div>
+
+            {/* ME3T logo */}
+            <div className="logo-item">
+              <img src="/me3t.png" alt="ME3T logo" className="logo" />
+            </div>
+          </div>
         </section>
           
       </div>
