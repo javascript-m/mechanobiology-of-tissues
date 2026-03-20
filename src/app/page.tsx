@@ -188,7 +188,7 @@ export default function Home() {
           <h2 className="section-title">Poster Session</h2>
 
           <p>
-            Poster session will be held on April 17th where all young investigators will have the opportunity to present their work.
+            Poster session will be held on April 16th where all young investigators will have the opportunity to present their work.
           </p>
 
           {/* <p>
@@ -209,7 +209,7 @@ export default function Home() {
 
           <a
             className="button"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdC-BzqCK6JPmVC_ZrRES_g9Hp9WPT9YuYxZ89TpSSsh-IELg/viewform?usp=dialog"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSee-SRUGLevHPfgP_kkTxiZTPeuEI83dMDtUso_VF9oXCw4DQ/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -231,6 +231,7 @@ export default function Home() {
             <li>Prof. Dr. Kristian Franze</li>
             <li>Dr. Sara Kaliman</li>
             <li>Dr. Jona Kayser</li>
+            <li>Dr. Rocio López-Posadas</li>
             <li>Dr. Jacopo Di Russo</li>
           </ul>
         </section>
