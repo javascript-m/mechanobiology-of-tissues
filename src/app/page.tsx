@@ -179,7 +179,7 @@ export default function Home() {
           </a>
 
           <p>
-            Deadline: <strong>March 23, 2026</strong>
+            Deadline: <strong>March 29, 2026</strong>
           </p>
         </section>
 
@@ -217,7 +217,7 @@ export default function Home() {
           </a>
 
           <p>
-            Deadline: <strong>March 26, 2026</strong>
+            Deadline: <strong>March 29, 2026</strong>
           </p>
         </section>
 
