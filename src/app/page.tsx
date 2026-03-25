@@ -112,6 +112,7 @@ export default function Home() {
           <ul className="list">
             <li><strong>Dates: </strong>April 15 – April 17, 2026</li>
             <li><strong>Location: </strong>Max-Planck-Zentrum für Physik und Medizin</li>
+            <li><strong>Address: </strong>Kussmaulallee 2, 91054 Erlangen</li>
           </ul>
 
           {/* <p>
