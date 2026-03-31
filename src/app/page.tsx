@@ -28,7 +28,7 @@ const program = [
       { time: "10:45", type: "student", speaker: "Mathis Greiler", title: "" },
       { time: "11:00 – 11:30", type: "break", title: "Coffee break" },
       { time: "11:30", type: "invited", speaker: "Rocio López-Posadas", title: "TBA" },
-      { time: "12:00", type: "invited", speaker: "Jacopo Di Russo", title: "Cell loss disrupts mechanical homeostasis to drive retinal pigment epithelium ageing-like phenotype in vitro" },
+      { time: "12:00", type: "invited", speaker: "Jacopo Di Russo", title: "Mechanical homeostasis of retinal pigment epithelium across space and time" },
       { time: "12:30", type: "student", speaker: "Melanie Johrden", title: "" },
       { time: "12:45", type: "student", speaker: "Raphael Tönshoff", title: "" },
       { time: "13:00", type: "student", speaker: "Rose Alkhateeb", title: "" },
