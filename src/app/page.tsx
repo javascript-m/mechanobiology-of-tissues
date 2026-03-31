@@ -20,15 +20,19 @@ const program = [
   {
     day: "April 16, Thursday",
     items: [
-      { time: "09:00", type: "invited", speaker: "TBA", title: "Title TBA" },
-      { time: "09:30", type: "student", speaker: "TBA", title: "Title TBA" },
-      { time: "10:00", type: "invited", speaker: "TBA", title: "Title TBA" },
-      { time: "10:30", type: "student", speaker: "TBA", title: "Title TBA" },
+      { time: "09:00", type: "invited", speaker: "Kristian Franze", title: "The mechanochemical regulation of brain development" },
+      { time: "09:30", type: "invited", speaker: "Felix B. Engel", title: "Beyond the Centrosome: Microtubule Networks Orchestrating Mechanical Signaling to the Nucleus" },
+      { time: "10:00", type: "student", speaker: "Konstantin M.", title: "" },
+      { time: "10:15", type: "student", speaker: "Farzahneh Aavani", title: "" },
+      { time: "10:30", type: "student", speaker: "Sushil Dubey", title: "" },
+      { time: "10:45", type: "student", speaker: "Mathis Greiler", title: "" },
       { time: "11:00 – 11:30", type: "break", title: "Coffee break" },
-      { time: "11:30", type: "invited", speaker: "TBA", title: "Title TBA" },
-      { time: "12:00", type: "student", speaker: "TBA", title: "Title TBA" },
-      { time: "12:30", type: "invited", speaker: "TBA", title: "Title TBA" },
-      { time: "13:00", type: "student", speaker: "TBA", title: "Title TBA" },
+      { time: "11:30", type: "invited", speaker: "Dr. Rocio López-Posadas", title: "TBA" },
+      { time: "12:00", type: "invited", speaker: "Jacopo Di Russo", title: "Cell loss disrupts mechanical homeostasis to drive retinal pigment epithelium ageing-like phenotype in vitro" },
+      { time: "12:30", type: "student", speaker: "Melanie Johrden", title: "" },
+      { time: "12:45", type: "student", speaker: "Raphael Tönshoff", title: "" },
+      { time: "13:00", type: "student", speaker: "Rose Alkhateeb", title: "" },
+      { time: "13:15", type: "student", speaker: "Iris Doolar", title: "" },
       { time: "13:30 – 14:00", type: "break", title: "Coffee break / mini lunch" },
       { time: "14:00 – 16:00", type: "highlight", title: "Poster session & lunch" },
       { time: "16:00 – 18:00", type: "highlight", title: "Social activities & city visit" },
@@ -39,18 +43,106 @@ const program = [
   {
     day: "April 17, Friday",
     items: [
-      { time: "09:00", type: "invited", speaker: "TBA", title: "Title TBA" },
-      { time: "09:30", type: "student", speaker: "TBA", title: "Title TBA" },
+      { time: "09:00", type: "invited", speaker: "Ben Fabry", title: "Biophysics of immune cell migration" },
+      { time: "09:30", type: "invited", speaker: "Sara Kaliman", title: "Mechanical Phenotyping of Blood Cells using Deformability Cytometry" },
+      { time: "10:00", type: "student", speaker: "Xin Yang", title: "" },
+      { time: "10:15", type: "student", speaker: "Alejandro Gomez", title: "" },
       { time: "10:30 – 10:45", type: "break", title: "Coffee break" },
-      { time: "10:45", type: "invited", speaker: "TBA", title: "Title TBA" },
-      { time: "11:15", type: "student", speaker: "TBA", title: "Title TBA" },
+      { time: "10:45", type: "invited", speaker: "Jona Kayser", title: "AI-guided discovery of physics-informed tumor therapies" },
+      { time: "11:15", type: "student", speaker: "Anil Can", title: "" },
+      { time: "11:30", type: "student", speaker: "Tiana Tietz", title: "" },
+      { time: "11:45", type: "student", speaker: "Marlene Menke & Veronica Donde", title: "" },
       { time: "12:15", type: "highlight", title: "Wrap-up and goodbye" }
     ]
   }
 ];
 
+const posters = [
+  {
+    id: 1,
+    author: "Aman Kumar Sharma",
+    title: "Mechanistic cues driving the formation of domes in multi-layered skin epithelia"
+  },
+  {
+    id: 2,
+    author: "Effie Tsichlia",
+    title: "Hypoxia-Responsive Extracellular Vesicles Orchestrate Angiogenic Niches in a Small-Cell-Lung-Cancer-on-a-Chip Model"
+  },
+  {
+    id: 3,
+    author: "Elena Honscheid",
+    title: "Keratin Network Defects: A Gateway to Lysosomal Dysfunction?"
+  },
+  {
+    id: 4,
+    author: "Felix Reul",
+    title: "Photodegradable Hydrogels for On-Demand Modeling of Age-Related Spatiotemporal ECM Deformation"
+  },
+  {
+    id: 5,
+    author: "Hannah Kubiza",
+    title: "Substrate stiffness affects maturation and beating direction of airway epithelium possibly via planar cell polarity signaling"
+  },
+  {
+    id: 6,
+    author: "Henriette Jopp",
+    title: "Kinase activity profiling of keratinocytes in response to monolayer compression"
+  },
+  {
+    id: 7,
+    author: "Liubov Imaylova",
+    title: "Development of a soft and adhesive microelectrode array to monitor endometrial receptivity"
+  },
+  {
+    id: 8,
+    author: "Maciej Weroniczak-Ballod",
+    title: "Refinement of collagen properties for maintaining mechanobiological relevance of rete ridges in biofabricated skin"
+  },
+  {
+    id: 9,
+    author: "Madhura Ramani",
+    title: "Density-dependent stiffness modulates cellular deformation in MDCK monolayers"
+  },
+  {
+    id: 10,
+    author: "Marco Buzio",
+    title: "3D micropatterning of PEDOT:PSS/Gelatin conductive hydrogels via two-photon lithography for soft bioelectronics"
+  },
+  {
+    id: 11,
+    author: "Marlene Menke",
+    title: "Towards a Personalized Chemotherapy-Induced Peripheral Neuropathy Model using patient stem cell-derived neurons"
+  },
+  {
+    id: 12,
+    author: "Narmin Abasova",
+    title: "Solid shear, no fear: resilience response of epithelial tissue"
+  },
+  {
+    id: 13,
+    author: "Pinar Keskin Oduncu",
+    title: "Directing the differentiation of iPSCs toward mesenchymal stromal cells through co-culture approaches"
+  },
+  {
+    id: 14,
+    author: "Vera Nischalke",
+    title: "UV-Micropatterning for high-throughput generation of embryoid bodies"
+  },
+  {
+    id: 15,
+    author: "Veronica Donde",
+    title: "Morphological alterations in hiPSC-derived sensory neurons from a Nav1.7-linked congenital insensitivity to pain patient"
+  },
+  {
+    id: 16,
+    author: "Werner W. Franke",
+    title: "How a novel category of cell junctions supports contraction of smooth muscle cell bundles"
+  }
+];
+
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showPosters, setShowPosters] = useState(false);
 
   return (
     <div className="landing-page">
@@ -170,14 +262,14 @@ export default function Home() {
             abstract through the submission form below.
           </p> */}
 
-          <a
+          {/* <a
             className="button"
             href="https://docs.google.com/forms/d/e/1FAIpQLSdC-BzqCK6JPmVC_ZrRES_g9Hp9WPT9YuYxZ89TpSSsh-IELg/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
           >
             Submit Abstract
-          </a>
+          </a>*/}
 
           <p>
             Deadline: <strong>March 29, 2026</strong>
@@ -192,30 +284,18 @@ export default function Home() {
             Poster session will be held on April 16th where all young investigators will have the opportunity to present their work.
           </p>
 
-          {/* <p>
-            In addition to oral presentations, the conference will host
-            a <strong>poster session</strong> where students and researchers can present
-            their work and engage in scientific discussions.
-          </p> */}
-
           <ul className="list">
             <li>Format: A0, portrait</li>
           </ul>
 
-          {/* <p>
-            The poster session provides an opportunity for participants
-            to receive feedback, exchange ideas, and explore potential
-            collaborations in a relaxed and interactive environment.
-          </p> */}
-
-          <a
+          {/* <a
             className="button"
             href="https://docs.google.com/forms/d/e/1FAIpQLSee-SRUGLevHPfgP_kkTxiZTPeuEI83dMDtUso_VF9oXCw4DQ/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
           >
             Submit Title
-          </a>
+          </a> */}
 
           <p>
             Deadline: <strong>March 29, 2026</strong>
@@ -290,7 +370,7 @@ export default function Home() {
 
                     {item.type === "student" && (
                       <>
-                        <span className="talk-type student">Student/Postdoc talk</span>
+                        <span className="talk-type student">Contributed talk</span>
                         <span className="talk-speaker">{item.speaker}</span>
                         <span className="talk-title">{item.title}</span>
                       </>
@@ -299,10 +379,39 @@ export default function Home() {
                     {(item.type === "break" ||
                       item.type === "highlight" ||
                       item.type === "event") && (
-                      <span className="program-special">{item.title}</span>
-                    )}
+                      <span className="program-special">
+                          {item.title} 
+                          {item.title === "Poster session & lunch" && (
+                          <div className="poster-inline-wrapper">
 
+                            <button
+                              className="poster-toggle small"
+                              onClick={() => setShowPosters(!showPosters)}
+                            >
+                              {showPosters ? "Hide posters" : "Show posters"}
+                            </button>
+
+                            {showPosters && (
+                              <div className="poster-inline-list">
+                                {posters.map((poster) => (
+                                  <div key={poster.id} className="poster-inline-item">
+                                    <span className="poster-inline-number">{poster.id}.</span>
+                                    <div>
+                                      <span className="poster-inline-author">{poster.author}</span>
+                                      <span className="poster-inline-title">{poster.title}</span>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+
+                          </div>
+                          )}
+                        </span>
+                    )}
                   </div>
+
+
 
                 </div>
               ))}
