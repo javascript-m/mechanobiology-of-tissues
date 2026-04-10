@@ -27,7 +27,7 @@ const program = [
       { time: "10:30", type: "student", speaker: "Sushil Dubey", title: "" },
       { time: "10:45", type: "student", speaker: "Mathis Grelier", title: "" },
       { time: "11:00 – 11:30", type: "break", title: "Coffee break" },
-      { time: "11:30", type: "invited", speaker: "Rocio López-Posadas", title: "Epithelial cell shedding regulates intestinal homeostasis" },
+      { time: "11:30", type: "invited", speaker: "Rocio López-Posadas", title: "The role of epithelial cell shedding in intestinal homeostasis" },
       { time: "12:00", type: "invited", speaker: "Jacopo Di Russo", title: "Mechanical homeostasis of retinal pigment epithelium across space and time" },
       { time: "12:30", type: "student", speaker: "Melanie Johrden", title: "" },
       { time: "12:45", type: "student", speaker: "Raphael Tönshoff", title: "" },
